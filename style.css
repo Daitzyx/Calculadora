@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(221, 210, 111), rgb(255, 123, 0)) no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#container {
+    width: 370px;
+    height: 531px;
+    margin: 58px auto;
+    
+    background-color: rgb(44, 48, 51);
+    padding: 5px;
+    color: #fff;
+    border-radius: 20px;
+    
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#result {
+    height: 70px;
+    margin: 5px 15px;
+    padding: 10px;
+    text-align: right;
+    line-height: 3em;
+    float: right;
+    font-size: 1.8em;
+}
+
+#screen {
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    width: 90%;
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    line-height: 3.5em;
+    float: left;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 7px;
+}
+
+li {
+    background-color: rgb(87, 85, 85);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 4px;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: rgb(22, 21, 21);
+}
+
+#numbers {
+    width: 100%;
+}
+
+#icons {
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+#icons li {
+    background-color: rgb(228, 109, 11);
+}
+
+.options {
+    background-color: rgb(175, 173, 170);
+    color: #000;
+}
+
+.two-places {
+    width: 153px;
+    border-radius: 40px;
+}
