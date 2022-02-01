@@ -9,9 +9,11 @@ let numberBefore;
 const pendingOperation = () => operator !== undefined;
 
 const calculate = () => {
+    
     if(pendingOperation()){
         const numberAfter = parseFloat(display.textContent.replace(',','.'));
         newNumber = true;
+        
         const result = eval(`${numberBefore}${operator}${numberAfter}`);
         updateDisplay(result);
     }
@@ -35,6 +37,9 @@ const selectOperator = (e) => {
         calculate();
         newNumber = true;
         operator = e.target.textContent;
+        if(operator === 'x'){
+            operator = '*'
+        }
         numberBefore = parseFloat(display.textContent.replace(',','.'));
     }
 }
@@ -46,7 +51,7 @@ const activeEqual = () => {
     operator = undefined;
 }
 
-document.getElementById('operatorEqual').addEventListener('click', activeEqual);
+document.getElementById('equal').addEventListener('click', activeEqual);
 
 
 function clean(){
@@ -93,7 +98,7 @@ const mapKey = {
     '-' : 'operatorSubtract',
     '+' : 'operatorMore',
     '=' : 'operatorEqual',
-    'Enter' : 'operatorEqual',
+    'Enter' : 'equal',
     'Escape' : 'clean',
     ',' : 'decimal'
 }
